@@ -1,0 +1,99 @@
+<%- include (`partials/header`) %> 
+
+<%- include (`partials/headerImg`) %>                      
+
+<section class="header"> 
+<%- include (`partials/navBar`) %>
+
+		<div class="text-box">
+			<h1>Best Polytechnic College in Srikakulam</h1>
+			<p>Government Polytechnic, Srikakulam was established in the year 1961.<br>
+				The institution was initially started with three Engineering Diploma Courses namely 
+				Civil, Electrical & Electronics and Mechanical Engineering.</p>
+			<a href="about" class="hero-btn">Visit Us To know More</a>
+		</div>
+	</section>
+
+	<!-- Course -->
+	<section class="course">
+		<h1>Courses Available</h1>
+		<p>We offers five Diploma Programmes of three years duration with annual intake of 60 for 
+			each programme for each year. The programmes are: </p>
+		<div class="row">
+            <% for (let i = 0; i <= 2; i++) { %>
+                <div class="course-col">
+                    <h3><%= course[i] %> </h3>
+                    <p>In the year <%= year[i] %> Diploma in <%= course[i] %> was credited to the list.</p>
+                </div>
+            <% } %>
+        </div>
+		
+		<div class="row">
+            <% for (let i = 3; i < 5; i++) { %>
+                <div class="course-col course-col2">
+                    <h3><%= course[i] %> </h3>
+                    <p>In the year <%= year[i] %> Diploma in <%= course[i] %> was credited to the list.</p>
+                </div>
+            <% } %>
+        </div>
+	</section>
+
+	<section class="college">
+		<h1>Our College</h1>
+		<p>The total Land area allotted to this Institution is 16 acres.</p>
+		<div class="row">
+			<div class="college-col">
+				<img src="<%= college_pics %>old_college.jpg">
+				<div class="layer">
+					<h3>COLLEGE</h3>
+				</div>
+			</div>
+			<div class="college-col">
+				<img src="<%= college_pics %>college_entrance.jpg">
+				<div class="layer">
+					<h3>Entrance</h3>
+				</div>
+			</div>
+			<div class="college-col">
+				<img src="<%= college_pics %>new_college.jpeg">
+				<div class="layer">
+					<h3>NEW COLLEGE</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Facilities -->
+
+	<section class="facilities">
+		<h1>College Facilities</h1>
+		
+		<div class="row">
+			<div class="facilities-col">
+				<img src="<%= college_pics %>boys_hostel.jpeg">
+				<h3>Hostel Facility for boys</h3>
+			</div>
+			<div class="facilities-col">
+				<img src="<%= college_pics %>girls_hostel.jpeg">
+				<h3>Seperate Hostel for girls</h3>
+			</div>
+		</div>
+				
+		<div class="row">
+			<div class="facilities-col">
+				<img src="<%= college_pics %>green.jpeg">
+				<h3>Surrounded with greenery</h3>
+			</div>
+			<div class="facilities-col">
+				<img src="<%= college_pics %>Computer-Lab.jpg">
+				<h3>Lab Facility</h3>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call To Action -->
+	<section class="cta">
+		<h1>For Any Queries, Advices or Complaints</h1>
+		<a href="contact" class="hero-btn">CONTACT US</a>
+	</section>
+<%- include (`partials/footer`) %>

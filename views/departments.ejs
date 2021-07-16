@@ -1,0 +1,52 @@
+<%- include (`partials/header`) %>
+
+<%- include (`partials/subHeaderImg`) %>
+
+<section class="sub-header"> 
+    <%- include (`partials/navBar`) %>
+    <h1>DEPARTMENTS</h1>
+</section>
+<section class="departments">
+    <h1>FACULTY</h1>
+		<div class="row">
+            <% for (let i = 0; i <= 2; i++) { %>
+                <a href="<%= link[i] %>faculty" class="department-col course-col">
+                    <div>
+                        <h3><%= course[i] %></h3>
+                    </div>
+                </a>
+            <% } %>
+        </div>		
+		<div class="row">
+            <% for (let i = 3; i < 6; i++) { %>
+                <a href="<%= link[i] %>faculty" class="department-col course-col ">
+                    <div>
+                        <h3><%= course[i] %></h3>
+                    </div>
+                </a>
+            <% } %>
+        </div>
+	</section>
+<section class="departments">
+    <h1>LABS</h1>
+		<div class="row">
+            <% for (let i = 0; i <= 2; i++) { %>
+                <a href="<%= link[i] %>labs" class="department-col course-col">
+                    <div>
+                        <h3><%= course[i] %></h3>
+                    </div>
+                </a>
+            <% } %>
+        </div>		
+		<div class="row">
+            <% for (let i = 3; i < 5; i++) { %>
+                <a href="<%= link[i] %>labs" class="department-col course-col course-col2">
+                    <div>
+                        <h3><%= course[i] %></h3>
+                    </div>
+                </a>
+            <% } %>
+        </div>
+	</section>
+
+<%- include (`partials/footer`) %>

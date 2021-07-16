@@ -1,0 +1,45 @@
+<%- include (`partials/header`) %>
+
+<%- include (`partials/subHeaderImg`) %>
+
+<section class="sub-header"> 
+    <%- include (`partials/navBar`) %>
+	<h1><%= title+" FACULTY" %> </h1>
+</section>
+
+<% for(let i=0; i<faculty.length; i++) { %>
+	<% if (i%2===0) { %>
+		<div class="pic-row">
+			<div>
+				<h3><strong>Name:&nbsp;&nbsp;&nbsp;</strong><%= facultyName[i] %></h3>
+				<h3><strong>Designation:&nbsp;&nbsp;&nbsp;</strong><%= facultyPost[i] %></h3>
+				<h3><strong>Contact:&nbsp;&nbsp;&nbsp;</strong><%= facultyMobile[i] %></h3>
+				<h3><strong>Mail:&nbsp;&nbsp;&nbsp;</strong>mail@mail.com</h3>
+			</div>
+			<div class="pic-col">
+				<center>
+					<img src="<%= faculty[i] %>"  alt="<%= faculty[i] %>">
+				</center>
+			</div>
+		</div>
+	<% } else { %>	
+		<div class="pic-row">
+			<div class="pic-col">
+				<center>
+					<img src="<%= faculty[i] %>"  alt="<%= faculty[i] %>">
+				</center>
+			</div>
+			<div>
+				<h3><strong>Name:&nbsp;&nbsp;&nbsp;</strong><%= facultyName[i] %></h3>
+				<h3><strong>Designation:&nbsp;&nbsp;&nbsp;</strong><%= facultyPost[i] %></h3>
+				<h3><strong>Contact:&nbsp;&nbsp;&nbsp;</strong><%= facultyMobile[i] %></h3>
+				<h3><strong>Mail:&nbsp;&nbsp;&nbsp;</strong>mail@mail.com</h3>
+			</div>
+		</div>
+		<% } %>
+	<% } %>
+	<div class="go-back">
+		<a href="/departments"><h2><i class="fas fa-arrow-left"></i>&nbsp;&nbsp;&nbsp;Go Back</h2></a>
+	</div>
+
+<%- include (`partials/footer`) %>

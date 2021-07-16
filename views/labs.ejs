@@ -1,0 +1,37 @@
+<%- include (`partials/header`) %>
+
+<%- include (`partials/subHeaderImg`) %> 
+
+<section class="sub-header"> 
+    <%- include (`partials/navBar`) %>
+	<h1><%= title+" LABS" %></h1>
+</section>
+
+<section class="labs">
+		<h1><%= title+" LABS" %></h1>
+		
+        <% for(let i = 0; i < labPics.length; i++) {%> 
+            <% if(i % 2 === 0) { %> 
+            <div class="labs-row">
+                <div class="labs-col">
+                    <img src="<%= labPics[i] %>">
+                </div>
+                <div class="labs-txt">
+                    <h3><%= labNames[i] %></h3>
+                </div>
+            </div>
+            <% } else { %>
+                <div class="labs-row">
+                    <div class="labs-txt">
+                        <h3><%= labNames[i] %></h3>
+                    </div>
+                    <div class="labs-col">
+                        <img src="<%= labPics[i] %>">
+                    </div>
+                </div>
+            <% } %>
+        <% } %>
+	<div class="go-back">
+		<a href="/departments" align='left'><h2><i class="fas fa-arrow-left"></i>&nbsp;&nbsp;&nbsp;Go Back</h2></a>
+	</div>
+<%- include (`partials/footer`) %>
